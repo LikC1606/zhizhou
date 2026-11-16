@@ -2,13 +2,13 @@
 
 把与 AI 协作时积累的工作习惯、科研约定和 skills，带到下一台服务器。
 
-知舟是 lzh 的个人工作知识库。平时散落在工具目录、`AGENTS.md`、研究协议和项目文档里的经验，在这里保存内容、来源和适用范围，再通过安装器提供给不同的 AI 工具。新经验继续写入仓库，通过 Git 保存历史、在机器之间同步。
+知舟由 lzh 维护，用来保存与 AI 协作时积累的工作经验。工具目录里的 skills、项目中的 `AGENTS.md`、科研协议和已确认的偏好，在这里保留完整内容、来源与适用范围。换服务器或换工具时，可以取回同一份积累，继续更新。
 
-**Portable working memory for AI coding and research.** Keep working agreements, scoped notes, and complete skills in Git, then restore them into Codex, Claude Code, Cursor, and Gemini CLI.
+Portable working memory for AI coding and research. Keep working agreements, scoped notes, and complete skills in Git, then restore them into Codex, Claude Code, Cursor, and Gemini CLI.
 
-欢迎参考这套组织方式，或 Fork 后维护自己的知识库。仓库包含作者的个人偏好和项目约束，首次安装前先阅读并调整 `memory/` 与 `machines/`，再预览安装结果。
+可以参考这套组织方式，或 Fork 后维护自己的知识库。首次安装前先阅读 `memory/`，按自己的工作方式调整偏好与项目约束，再用 `machines/` 配置目标机器的目录。
 
-[快速开始](#快速开始) · [记录经验](#记录经验) · [维护与同步](#维护与同步) · [目录导航](#目录导航)
+[快速开始](#快速开始) · [记录经验](#记录经验) · [维护与同步](#维护与同步) · [目录导航](#目录导航) · [版权与引用](#版权与引用)
 
 ## 保存了什么
 
@@ -40,7 +40,7 @@ cd zhizhou
 
 `check` 检查记忆、skill 入口和已登记快照。`install` 预览将写入的位置，添加 `--apply` 后才执行安装。默认安装到当前用户，为 Codex、Claude Code、Cursor 和 Gemini CLI 生成入口。
 
-安装后保留仓库在本机的路径：工具入口会指向这里的记忆索引。移动仓库后重新安装，更新引用路径。
+安装后，工具入口会引用本仓库的记忆索引。请保留仓库在本机的路径；移动后重新安装即可更新引用。
 
 ### 工具入口
 
@@ -74,7 +74,7 @@ Cursor 的用户规则需要手动粘贴；其项目规则可以直接生成。�
 
 ## 记录经验
 
-值得保存的内容包括会影响以后工作的明确偏好、用户纠正、已确认结论和可复用经验。每条记录都保留来源、日期、状态和适用范围。
+记录会影响以后工作的明确偏好、用户纠正、已确认结论，以及可以复用的经验。每条记录保留来源、日期、状态和适用范围，说明后续任务应在什么条件下采用它。
 
 | 范围 | 用途 |
 | --- | --- |
@@ -109,7 +109,7 @@ rg -n '关键词' memory skills projects clients
 
 ## 维护与同步
 
-通常直接在仓库中维护内容。如果 skill 已在工具目录里修改，可以导入完整目录：
+日常直接在仓库中维护内容。已在工具目录里修改过的 skill，可以连同脚本和资源完整导入：
 
 ```bash
 ./zhizhou import-skills /path/to/skills
@@ -151,10 +151,16 @@ Git 同步需要显式执行。尚未提交、推送的经验仍只保存在当�
 | [`machines/`](machines/) | 各服务器的路径配置 |
 | [`docs/`](docs/) | [工具适配](docs/adapters.md)、[迁移说明](docs/migration.md)、[收录范围](docs/coverage.md)、[验证记录](docs/verification.md) |
 
-已通过 17 项隔离测试和完整迁移验证，覆盖配置保留、冲突处理、旧名称兼容和仓库移动后的路径更新。文件安装与客户端实际加载分别核对。
+安装器已通过 17 项隔离测试和完整迁移验证，覆盖配置保留、冲突处理、旧名称兼容和移动后的路径更新。文件安装完成后，仍需在客户端的新会话中核对加载结果。
 
 启动器优先使用 `/usr/bin/python3`，可通过 `ZHIZHOU_PYTHON` 指定解释器。旧 `./lzh-memory` 命令及安装状态保留兼容，历史来源保持原样。
 
-## 来源与复用
+## 版权与引用
 
-仓库包含个人约定、本地修改和第三方 skills，来源见 [`sources/`](sources/) 与 [客户端资料](clients/README.md)。第三方内容保留各自的许可与版权信息；公开仓库不代表为全部收录内容授予统一许可。复用具体 skill 时，请保留其来源与适用许可。
+作者与维护者：[Zhenhao Liu（lzh / LikC1606）](https://github.com/LikC1606)。Copyright © 2026 Zhenhao Liu。
+
+知舟的原创安装器、测试和原创说明文档采用 [MIT License](LICENSE)，允许使用、修改和商用，分发时须保留许可证中的版权与许可声明。具体适用文件见 [版权范围说明](NOTICE.md)。
+
+收录的 skills、项目快照和素材遵循各自的许可，不因进入本仓库而改为 MIT。[第三方来源与版权说明](THIRD_PARTY_NOTICES.md) 列出了已核实署名、素材 credits 和仍未确认的许可信息。
+
+研究或文章中使用知舟时，欢迎通过 GitHub 的 **Cite this repository** 或 [CITATION.cff](CITATION.cff) 获取引用信息。引用第三方 skill 或素材时，也请注明其原作者；学术引用建议不增加 MIT 许可之外的使用条件。
