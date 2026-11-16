@@ -4,6 +4,10 @@
 
 知舟是 lzh 的个人工作知识库。平时散落在工具目录、`AGENTS.md`、研究协议和项目文档里的经验，在这里保存内容、来源和适用范围，再通过安装器提供给不同的 AI 工具。新经验继续写入仓库，通过 Git 保存历史、在机器之间同步。
 
+**Portable working memory for AI coding and research.** Keep working agreements, scoped notes, and complete skills in Git, then restore them into Codex, Claude Code, Cursor, and Gemini CLI.
+
+欢迎参考这套组织方式，或 Fork 后维护自己的知识库。仓库包含作者的个人偏好和项目约束，首次安装前先阅读并调整 `memory/` 与 `machines/`，再预览安装结果。
+
 [快速开始](#快速开始) · [记录经验](#记录经验) · [维护与同步](#维护与同步) · [目录导航](#目录导航)
 
 ## 保存了什么
@@ -23,7 +27,7 @@ Skills 覆盖资料检索、科研方案讨论、AutoResearch、竞赛优化、�
 
 ## 快速开始
 
-需要 Git、Python 3，以及有私有仓库访问权限的 GitHub 账号。安装器只使用 Python 标准库。
+需要 Git 和 Python 3。仓库已公开，可直接克隆；安装器只使用 Python 标准库。
 
 ```bash
 git clone https://github.com/LikC1606/zhizhou.git
@@ -150,3 +154,7 @@ Git 同步需要显式执行。尚未提交、推送的经验仍只保存在当�
 已通过 17 项隔离测试和完整迁移验证，覆盖配置保留、冲突处理、旧名称兼容和仓库移动后的路径更新。文件安装与客户端实际加载分别核对。
 
 启动器优先使用 `/usr/bin/python3`，可通过 `ZHIZHOU_PYTHON` 指定解释器。旧 `./lzh-memory` 命令及安装状态保留兼容，历史来源保持原样。
+
+## 来源与复用
+
+仓库包含个人约定、本地修改和第三方 skills，来源见 [`sources/`](sources/) 与 [客户端资料](clients/README.md)。第三方内容保留各自的许可与版权信息；公开仓库不代表为全部收录内容授予统一许可。复用具体 skill 时，请保留其来源与适用许可。
