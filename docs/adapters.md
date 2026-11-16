@@ -8,12 +8,12 @@
 | --- | --- | --- |
 | Codex | `$CODEX_HOME/AGENTS.md`，默认 `~/.codex/AGENTS.md` | `~/.agents/skills/` |
 | Claude Code | `~/.claude/CLAUDE.md` | `~/.claude/skills/` |
-| Cursor | 导出到 `~/.lzh-memory/cursor-user-rules.md`，然后粘贴到设置页 | `~/.agents/skills/` |
+| Cursor | 导出到 `~/.zhizhou/cursor-user-rules.md`，然后粘贴到设置页 | `~/.agents/skills/` |
 | Gemini CLI | `~/.gemini/GEMINI.md` | `~/.agents/skills/` |
 
 ```bash
-./lzh-memory install --tools codex claude cursor gemini
-./lzh-memory install --tools codex claude cursor gemini --apply
+./zhizhou install --tools codex claude cursor gemini
+./zhizhou install --tools codex claude cursor gemini --apply
 ```
 
 可用 `--home PATH` 指定目标 home；Codex 的独立配置目录可用 `--codex-home PATH` 指定。工具内置 skills 仍由对应工具维护，不作为个人 skill 复制。
@@ -23,15 +23,15 @@ Cursor 用户规则通过应用设置维护，官方没有这里可直接写入�
 ## 项目范围
 
 ```bash
-./lzh-memory install --project /path/to/project --tools all
-./lzh-memory install --project /path/to/project --tools all --apply
+./zhizhou install --project /path/to/project --tools all
+./zhizhou install --project /path/to/project --tools all --apply
 ```
 
 | 选择 | 项目中生成的入口与资源 |
 | --- | --- |
 | Codex | `AGENTS.md`、`.agents/skills/` |
 | Claude Code | `CLAUDE.md`、`.claude/skills/` |
-| Cursor | `.cursor/rules/lzh-memory.mdc`、`.agents/skills/` |
+| Cursor | `.cursor/rules/zhizhou.mdc`、`.agents/skills/` |
 | Gemini CLI | `GEMINI.md`、`.agents/skills/` |
 | 通用 `agents` | `AGENTS.md`、`.agents/skills/` |
 

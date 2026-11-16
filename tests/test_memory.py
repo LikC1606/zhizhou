@@ -6,6 +6,7 @@ or project. These tests never install into the current user's configuration.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -17,8 +18,10 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BEGIN = "<!-- lzh-memory:begin -->"
-END = "<!-- lzh-memory:end -->"
+BEGIN = "<!-- zhizhou:begin -->"
+END = "<!-- zhizhou:end -->"
+LEGACY_BEGIN = "<!-- lzh-memory:begin -->"
+LEGACY_END = "<!-- lzh-memory:end -->"
 
 
 def write(path: Path, content: str) -> None:
@@ -41,7 +44,7 @@ def snapshot(root: Path) -> dict[str, bytes | str]:
 
 class MemoryCliTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.scratch = tempfile.TemporaryDirectory(prefix="lzh-memory-tests-")
+        self.scratch = tempfile.TemporaryDirectory(prefix="zhizhou-tests-")
         self.addCleanup(self.scratch.cleanup)
         self.base = Path(self.scratch.name)
         self.repo = self.base / "memory repository"
@@ -108,10 +111,10 @@ class MemoryCliTests(unittest.TestCase):
         self.assertIn("Keep user changes intact.", installed)
         self.assertTrue((self.home / ".agents/skills/demo/SKILL.md").is_file())
         self.assertTrue((self.home / ".claude/skills/demo/references/method.md").is_file())
-        self.assertTrue((self.home / ".lzh-memory/cursor-user-rules.md").is_file())
-        self.assertTrue((self.home / ".lzh-memory/install-state.json").is_file())
+        self.assertTrue((self.home / ".zhizhou/cursor-user-rules.md").is_file())
+        self.assertTrue((self.home / ".zhizhou/install-state.json").is_file())
         first = snapshot(self.home)
-        state_name = ".lzh-memory/install-state.json"
+        state_name = ".zhizhou/install-state.json"
         first_state = json.loads(first.pop(state_name))
         first_state.pop("updated_at", None)
         self.assert_success(self.install_home("--apply"))
@@ -178,7 +181,7 @@ class MemoryCliTests(unittest.TestCase):
         self.assert_success(
             self.cli("install", "--project", str(self.project), "--tools", "all", "--apply")
         )
-        cursor_rule = self.project / ".cursor/rules/lzh-memory.mdc"
+        cursor_rule = self.project / ".cursor/rules/zhizhou.mdc"
         content = cursor_rule.read_text()
         self.assertTrue(content.startswith("---\n"), content)
         self.assertRegex(content, r"(?m)^alwaysApply:\s*true\s*$")
@@ -187,7 +190,7 @@ class MemoryCliTests(unittest.TestCase):
         self.assertTrue((self.project / "GEMINI.md").is_file())
         self.assertTrue((self.project / ".agents/skills/demo/SKILL.md").is_file())
         self.assertTrue((self.project / ".claude/skills/demo/SKILL.md").is_file())
-        self.assertFalse((self.project / ".cursor/rules/lzh-memory.md").exists())
+        self.assertFalse((self.project / ".cursor/rules/zhizhou.md").exists())
 
     def test_reinstall_after_repository_move_refreshes_paths(self) -> None:
         self.assert_success(self.install_home("--apply", tools="codex"))
@@ -200,6 +203,62 @@ class MemoryCliTests(unittest.TestCase):
         self.assertIn(str(moved), rules)
         self.assertNotIn(str(old_repo), rules)
         self.assertEqual(rules.count(BEGIN), 1)
+
+    def legacy_install(self, target: Path, rule: Path, *, cursor: bool = False) -> str:
+        """Represent an install written by the original, publicly shipped CLI."""
+        section = LEGACY_BEGIN + "\n# lzh-memory\n\nPrevious shared policy.\n" + LEGACY_END
+        header = "---\ndescription: previous shared rules\nalwaysApply: true\n---\n\n" if cursor else ""
+        text = header + "Local instructions outside the managed section.\n\n" + section + "\n"
+        write(rule, text)
+        state = {
+            "version": 1,
+            "repository": "/old/server/lzh-memory",
+            "entries": {
+                str(rule): {"kind": "instructions", "digest": hashlib.sha256(section.encode()).hexdigest()}
+            },
+        }
+        write(target / ".lzh-memory/install-state.json", json.dumps(state) + "\n")
+        return text
+
+    def test_legacy_home_state_and_markers_migrate_without_duplicate_rules(self) -> None:
+        rules = self.home / ".codex/AGENTS.md"
+        self.legacy_install(self.home, rules)
+        self.assert_success(self.install_home("--apply", tools="codex"))
+        content = rules.read_text()
+        self.assertIn("Local instructions outside the managed section.", content)
+        self.assertIn("Keep user changes intact.", content)
+        self.assertEqual(content.count(BEGIN), 1)
+        self.assertEqual(content.count(END), 1)
+        self.assertNotIn(LEGACY_BEGIN, content)
+        self.assertNotIn(LEGACY_END, content)
+        self.assertTrue((self.home / ".zhizhou/install-state.json").is_file())
+        self.assert_success(self.install_home("--apply", tools="codex"))
+        self.assertEqual(rules.read_text(), content)
+
+    def test_legacy_managed_section_with_local_edits_rejects_entire_plan(self) -> None:
+        rules = self.home / ".codex/AGENTS.md"
+        original = self.legacy_install(self.home, rules)
+        write(rules, original.replace("Previous shared policy.", "A local correction to preserve."))
+        before = snapshot(self.home)
+        result = self.install_home("--apply")
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(snapshot(self.home), before)
+        self.assertFalse((self.home / ".zhizhou").exists())
+
+    def test_legacy_project_cursor_rule_is_reused_without_second_always_apply_file(self) -> None:
+        legacy_rule = self.project / ".cursor/rules/lzh-memory.mdc"
+        self.legacy_install(self.project, legacy_rule, cursor=True)
+        self.assert_success(
+            self.cli("install", "--project", str(self.project), "--tools", "cursor", "--apply")
+        )
+        content = legacy_rule.read_text()
+        self.assertIn("alwaysApply: true", content)
+        self.assertIn("Local instructions outside the managed section.", content)
+        self.assertIn("Keep user changes intact.", content)
+        self.assertEqual(content.count(BEGIN), 1)
+        self.assertNotIn(LEGACY_BEGIN, content)
+        self.assertFalse((self.project / ".cursor/rules/zhizhou.mdc").exists())
+        self.assertTrue((self.project / ".zhizhou/install-state.json").is_file())
 
     def make_import_source(self) -> tuple[Path, Path]:
         source = self.base / "incoming"
@@ -279,6 +338,29 @@ class MemoryCliTests(unittest.TestCase):
         )
         self.assert_success(self.cli("check"))
         (self.repo / "skills/demo/SKILL.md").unlink()
+        result = self.cli("check")
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_check_rejects_missing_registered_project_snapshot(self) -> None:
+        write(
+            self.repo / "skills/second/SKILL.md",
+            "---\nname: second\ndescription: Another valid example skill.\n---\n\n"
+            "Follow this independent procedure.\n",
+        )
+        guide = self.repo / "projects/fixture/AGENTS.md"
+        write(guide, "# Historical project guide\n\nKeep this project's conventions.\n")
+        write(
+            self.repo / "sources/project-guides.json",
+            json.dumps([{
+                "project": "fixture",
+                "source": "/original-server/project/AGENTS.md",
+                "snapshot": "projects/fixture/AGENTS.md",
+                "captured_on": "2026-11-16",
+                "role": "historical-project-guide",
+            }]) + "\n",
+        )
+        self.assert_success(self.cli("check"))
+        guide.unlink()
         result = self.cli("check")
         self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
 

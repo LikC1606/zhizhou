@@ -406,6 +406,15 @@
       "captured_at": "2026-11-16T06:01:11+00:00",
       "digest": "bf70b45c0cec1415c5542854b5703ce3dab237b2377a008a9d091cb6e9b9c97b",
       "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "competition-optimize": {
+      "source": "/data/lzh/workspace/projects/competition-agent-skill/skills/competition-optimize",
+      "resolved_source": "/data/lzh/workspace/projects/competition-agent-skill/skills/competition-optimize",
+      "captured_at": "2026-11-16T06:18:56+00:00",
+      "digest": "3e9e71b1cb58eb6e3b29c5b9689ea01a1af406ce2153a068f7a1af560203bbb0",
+      "origin": "local competition-agent-skill project; complete uninstalled skill source",
+      "source_commit": "acbc4ed4d5dc9a2c61b08da9283cb3aaa4ac8622",
+      "source_dirty": false
     }
   }
 }

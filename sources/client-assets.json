@@ -1,0 +1,155 @@
+[
+  {
+    "client": "gemini-antigravity",
+    "source": "/home/lzh/.gemini/config/rules/subagent-default.md",
+    "snapshot": "clients/gemini-antigravity/rules/subagent-default.md",
+    "scope": "client:gemini-antigravity",
+    "captured_on": "2026-11-16",
+    "role": "client-specific rule or agent snapshot; not automatically installed",
+    "sha256": "d16fe983f6feeaca6d4b3bcaa504bc98d5a268504ce641a6a370e57bf5f629d9"
+  },
+  {
+    "client": "gemini-antigravity",
+    "source": "/home/lzh/.gemini/config/agents/hydrogen-default.md",
+    "snapshot": "clients/gemini-antigravity/agents/hydrogen-default.md",
+    "scope": "client:gemini-antigravity",
+    "captured_on": "2026-11-16",
+    "role": "client-specific rule or agent snapshot; not automatically installed",
+    "sha256": "1daf1f994d523486263c337ed405dd2ed3cea44ee2109c07907eb975745da77b"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/agents-sdk",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/agents-sdk",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "e761ed205bc184279930c6b85f26c95917ac9054e4bb19a274829e50126b0d93"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/cloudflare",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/cloudflare",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "01bf85ee1d3b6530082184d344a526c8d870fe66f168dc293454748afd958859"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/cloudflare-email-service",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/cloudflare-email-service",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "0e36036a4585183c0e5ac401260e3376fbe02e29234d878abe565ea7ee16a4d9"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/cloudflare-one",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/cloudflare-one",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "52dcc2a321dd83805936fdccdfcf83439b51d3d3152f9bd3b34609347cb13da5"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/cloudflare-one-migrations",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/cloudflare-one-migrations",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "398281ba4334ea9b50434b566baed0467d7601102794b81f72467ef1f4088d3f"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/durable-objects",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/durable-objects",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "375344eee97a46c1715a40ba4006c3f23041f3341ebd64062e6f09d702c8d649"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/nextjs-on-cloudflare",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/nextjs-on-cloudflare",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "5404f2443f370dd70a9e463ecf84518b9702aee6407f459fe29971feb21905d7"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/sandbox-migrate-to-next",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/sandbox-migrate-to-next",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "12ec684951c405236ce7370a53d58d4b564d4a748ac452ce6aa8c168e50b84a1"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/sandbox-next",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/sandbox-next",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "c28f54333efac74e0a7397cd1bf2f0bb9f0eea438fbe27453141bc34e57979a0"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/sandbox-stable",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/sandbox-stable",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "9ca5b009468b2a8e61ed13f1962bfb537896d7ddaaa3f18f308d4e1962df19d8"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/turnstile-spin",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/turnstile-spin",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "0e11d14f37831988b3805604660b8e7a98fc53cb3b321fd3f044d0ec04c788de"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/web-perf",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/web-perf",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "e57c737912c4d5ca4ba6272a997db5daed6230fa5df6cce519f4e9c855827213"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/workers-best-practices",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/workers-best-practices",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "5e1dcbac6c70b3f060f0a66dc917699453f851717c7b9bf21575ed3de5908015"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/skills/wrangler",
+    "snapshot": "clients/claude/plugins/cloudflare/skills/wrangler",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "plugin skill snapshot preserving unknown local changes; not automatically installed",
+    "digest": "699987cf31d34fe6379792516f727c6bc63812db4863a8cad54d14b8057210d0"
+  },
+  {
+    "client": "claude-code",
+    "source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0/plugin.json",
+    "snapshot": "clients/claude/plugins/cloudflare/plugin.json",
+    "scope": "client:claude-code:cloudflare",
+    "captured_on": "2026-11-16",
+    "role": "upstream plugin manifest snapshot; not automatically installed",
+    "sha256": "4ccb9de51993b5db32880a5a166f97bcb0211884f1cab5d50366a36af48a757f"
+  }
+]

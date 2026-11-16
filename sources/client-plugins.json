@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "captured_on": "2026-11-16",
+  "client": "claude-code",
+  "plugins": [
+    {
+      "id": "document-skills@anthropic-agent-skills",
+      "marketplace": "anthropic-agent-skills",
+      "marketplace_repository": "https://github.com/anthropics/skills",
+      "declared_plugin_source": "./",
+      "installed_version": "33375500bcea",
+      "installed_git_commit_from_registry": "33375500bcea98d610eb30ce10ac4e59b89c390d",
+      "source_registry": "/home/lzh/.claude/plugins/installed_plugins.json",
+      "installed_source": "/home/lzh/.claude/plugins/cache/anthropic-agent-skills/document-skills/33375500bcea",
+      "enabled_skills": [
+        "xlsx",
+        "docx",
+        "pptx",
+        "pdf"
+      ],
+      "enabled_skills_basis": "Explicit skills list of document-skills in .claude-plugin/marketplace.json; other cached skill directories are not treated as enabled.",
+      "local_changes": {
+        "status": "not_observed",
+        "comparison_commit": "33375500bcea98d610eb30ce10ac4e59b89c390d",
+        "matched_files_checked": 419,
+        "method": "Compared matching installed payload files byte-for-byte to the recorded commit in the local anthropics/skills Git repository; no differences. Marketplace working tree also clean. Runtime .in_use is excluded.",
+        "boundary": "This is file comparison, not a client loading or functional test."
+      },
+      "payload_snapshot": null,
+      "recovery": "Reinstall document-skills from its official anthropic-agent-skills marketplace; use the recorded commit/version when reproducibility is required. Reauthorize external tools separately."
+    },
+    {
+      "id": "cloudflare@claude-plugins-official",
+      "marketplace": "claude-plugins-official",
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "plugin_repository": "https://github.com/cloudflare/skills",
+      "installed_version": "1.0.0",
+      "installed_git_commit_from_registry": "b052c32bab7dd493513260228a36c88294f343f1",
+      "commit_scope": "Preserved from installer registry; no matching local Git metadata was available to independently establish the source tree.",
+      "source_registry": "/home/lzh/.claude/plugins/installed_plugins.json",
+      "installed_source": "/home/lzh/.claude/plugins/cache/claude-plugins-official/cloudflare/1.0.0",
+      "enabled_skills": [
+        "agents-sdk",
+        "cloudflare",
+        "cloudflare-email-service",
+        "cloudflare-one",
+        "cloudflare-one-migrations",
+        "durable-objects",
+        "nextjs-on-cloudflare",
+        "sandbox-migrate-to-next",
+        "sandbox-next",
+        "sandbox-stable",
+        "turnstile-spin",
+        "web-perf",
+        "workers-best-practices",
+        "wrangler"
+      ],
+      "enabled_skills_basis": "14 SKILL.md entrypoints in the installed plugin conventional skills directory; actual client loading was not tested.",
+      "local_changes": {
+        "status": "unknown",
+        "reason": "The installed plugin and official marketplace directory have no matching local Git history available for comparison. No claim that the payload is unchanged upstream.",
+        "preservation": "All 14 skill payloads and the credential-free plugin.json manifest are retained under clients/claude/plugins/cloudflare/."
+      },
+      "payload_snapshot": "clients/claude/plugins/cloudflare",
+      "recovery": "Use the official Claude Code Cloudflare plugin installation flow, then compare this snapshot before restoring local changes. Authentication, MCP configuration and service authorization are not bundled."
+    }
+  ]
+}

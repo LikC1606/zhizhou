@@ -12,6 +12,7 @@
 | 研究方案与评测选择 | [grill-with-docs](../skills/grill-with-docs/SKILL.md)、[grilling](../skills/grilling/SKILL.md) |
 | 科学术语与长期决定 | [domain-modeling](../skills/domain-modeling/SKILL.md)、[record-decision](../skills/record-decision/SKILL.md) |
 | 资料检索与带来源的研究 | [deep-research](../skills/deep-research/SKILL.md) |
+| 竞赛实现、评测与持续优化 | [competition-optimize](../skills/competition-optimize/SKILL.md) |
 | AutoResearch 选题与优化面 | [paper-discovery](../skills/autoresearch-paper-discovery/SKILL.md)、[optimization-surface](../skills/autoresearch-optimization-surface/SKILL.md) |
 | AutoResearch 工程题与验收 | [task-authoring](../skills/autoresearch-task-authoring/SKILL.md)、[task-qa](../skills/autoresearch-task-qa/SKILL.md)、[baseline-quality](../skills/autoresearch-baseline-quality/SKILL.md) |
 | 实验隔离与交接 | [run-isolation](../skills/autoresearch-run-isolation/SKILL.md)、[conversation-handoff](../skills/autoresearch-conversation-handoff/SKILL.md) |
@@ -20,3 +21,5 @@
 这些 skill 分别服务于研究、出题、只读质检或运行组织，按实际任务选择。读取它们不会扩展运行、外部写入或逐题干预授权。
 
 TheoremOS 还必须遵守其 [系统维护与解题干预边界](projects/theorem-os.md)。实现完成、测试通过、已激活和原题通过分别报告；人工逐题协助不能计作系统自主能力。
+
+各项目的 Protocol 与决定记录快照见 [项目资料索引](../projects/README.md)。分支状态、协议修订及适用项目以各条来源记录为准，不能仅凭归档状态认定已在真实运行中启用。

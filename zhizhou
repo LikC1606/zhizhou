@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+zhizhou_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -n "${ZHIZHOU_PYTHON:-}" ]; then
+    zhizhou_python=$ZHIZHOU_PYTHON
+elif [ -n "${LZH_MEMORY_PYTHON:-}" ]; then
+    zhizhou_python=$LZH_MEMORY_PYTHON
+elif [ -x /usr/bin/python3 ]; then
+    zhizhou_python=/usr/bin/python3
+else
+    zhizhou_python=python3
+fi
+exec "$zhizhou_python" "$zhizhou_root/scripts/memory.py" "$@"

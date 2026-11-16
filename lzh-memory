@@ -1,11 +1,4 @@
 #!/bin/sh
 set -eu
-memory_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-if [ -n "${LZH_MEMORY_PYTHON:-}" ]; then
-    memory_python=$LZH_MEMORY_PYTHON
-elif [ -x /usr/bin/python3 ]; then
-    memory_python=/usr/bin/python3
-else
-    memory_python=python3
-fi
-exec "$memory_python" "$memory_root/scripts/memory.py" "$@"
+legacy_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec "$legacy_root/zhizhou" "$@"

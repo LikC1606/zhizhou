@@ -17,8 +17,10 @@ import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BEGIN = "<!-- lzh-memory:begin -->"
-END = "<!-- lzh-memory:end -->"
+BEGIN = "<!-- zhizhou:begin -->"
+END = "<!-- zhizhou:end -->"
+LEGACY_BEGIN = "<!-- lzh-memory:begin -->"
+LEGACY_END = "<!-- lzh-memory:end -->"
 EXCLUDED = {".git", "__pycache__", "node_modules", ".DS_Store"}
 TOOLS = ("codex", "claude", "cursor", "gemini", "agents")
 CORE = (
@@ -44,7 +46,7 @@ def atomic_text(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     mode = stat.S_IMODE(path.stat().st_mode) if path.exists() else 0o644
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent,
-                                     prefix=".lzh-memory-", delete=False) as stream:
+                                     prefix=".zhizhou-", delete=False) as stream:
         temporary = Path(stream.name)
         try:
             stream.write(text)
@@ -110,7 +112,7 @@ def tree_digest(directory, *, filtered=True):
 def copy_skill(source, target):
     """Stage the full payload before replacing a previously managed directory."""
     target.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix=".lzh-memory-", dir=target.parent) as tmp:
+    with tempfile.TemporaryDirectory(prefix=".zhizhou-", dir=target.parent) as tmp:
         temporary = Path(tmp)
         payload = temporary / "payload"
         payload.mkdir()
@@ -143,7 +145,7 @@ def memory_body(home, machine):
         "projects": str(home / "workspace/projects"),
         "outputs": str(home / "workspace/outputs"),
         "downloads": str(home / "Downloads"),
-        "temporary": str(home / ".cache/lzh-memory/tmp"),
+        "temporary": str(home / ".cache/zhizhou/tmp"),
     }
     if machine:
         supplied = read_json(machine, None)
@@ -157,7 +159,7 @@ def memory_body(home, machine):
                 raise MemoryError(f"Machine path must be absolute: {key}")
             paths[key] = str(candidate)
     sections = [
-        "# lzh-memory\n\n"
+        "# 知舟 · Zhizhou\n\n"
         f"个人工作知识库：`{ROOT}`。任务开始时读取 `{ROOT / 'memory/INDEX.md'}`；"
         "按任务范围读取 memory/notes/ 中 status 为 confirmed 的相关记录。"
         "pending 记录是待讨论建议，不作为用户规则。项目当前的指令和研究记录应结合阅读；"
@@ -183,15 +185,20 @@ def memory_body(home, machine):
 
 
 def managed_section(text):
-    if text.count(BEGIN) != text.count(END) or text.count(BEGIN) > 1:
-        raise MemoryError("Unbalanced or repeated lzh-memory markers")
-    if BEGIN not in text:
-        return None
-    start = text.index(BEGIN)
-    finish = text.index(END)
-    if finish < start:
-        raise MemoryError("Reversed lzh-memory markers")
-    return text[start:finish + len(END)]
+    section = None
+    for begin, end in ((BEGIN, END), (LEGACY_BEGIN, LEGACY_END)):
+        if text.count(begin) != text.count(end) or text.count(begin) > 1:
+            raise MemoryError("Unbalanced or repeated Zhizhou markers")
+        if begin not in text:
+            continue
+        if section is not None:
+            raise MemoryError("Both current and legacy managed sections exist; merge them first")
+        start = text.index(begin)
+        finish = text.index(end)
+        if finish < start:
+            raise MemoryError("Reversed Zhizhou markers")
+        section = text[start:finish + len(end)]
+    return section
 
 
 @dataclass
@@ -221,7 +228,7 @@ def text_operation(path, body, entries, *, cursor=False):
         if cursor and current:
             return Operation(path, "conflict", "instructions",
                              reason="Existing Cursor rule has no managed section")
-        prefix = "---\ndescription: lzh personal working memory\nalwaysApply: true\n---\n\n" if cursor else ""
+        prefix = "---\ndescription: Zhizhou personal working knowledge\nalwaysApply: true\n---\n\n" if cursor else ""
         desired = current + ("\n\n" if current and not current.endswith("\n\n") else "") + prefix + section + "\n"
     return Operation(path, "unchanged" if desired == current else "write", "instructions",
                      digest=digest_text(section), text=desired)
@@ -274,8 +281,10 @@ def install(args):
         raise MemoryError("The generic agents adapter is project-scoped; pass --project.")
     if args.codex_home and project:
         raise MemoryError("--codex-home applies to home installation only.")
-    state_file = destination / ".lzh-memory/install-state.json"
-    state = read_json(state_file, {"version": 1, "entries": {}})
+    state_file = destination / ".zhizhou/install-state.json"
+    legacy_state_file = destination / ".lzh-memory/install-state.json"
+    existing_state = state_file if state_file.exists() else legacy_state_file
+    state = read_json(existing_state, {"version": 1, "entries": {}})
     if state.get("version") != 1 or not isinstance(state.get("entries"), dict):
         raise MemoryError(f"Unsupported installation state: {state_file}")
     entries = state["entries"]
@@ -296,7 +305,13 @@ def install(args):
         instruction_paths[destination / ("GEMINI.md" if project else ".gemini/GEMINI.md")] = False
         skill_roots.add(destination / ".agents/skills")
     if "cursor" in selected:
-        path = destination / (".cursor/rules/lzh-memory.mdc" if project else ".lzh-memory/cursor-user-rules.md")
+        path = destination / (".cursor/rules/zhizhou.mdc" if project else ".zhizhou/cursor-user-rules.md")
+        legacy_cursor = destination / ".cursor/rules/lzh-memory.mdc"
+        if project and legacy_cursor.exists():
+            if path.exists():
+                raise MemoryError("Both current and legacy Cursor rules exist; merge them first")
+            # Reuse an existing file so two alwaysApply rules never coexist.
+            path = legacy_cursor
         instruction_paths[path] = bool(project)
         skill_roots.add(destination / ".agents/skills")
     operations = [text_operation(path, body, entries, cursor=cursor)
@@ -313,7 +328,7 @@ def install(args):
             entries[str(op.path)] = {"kind": op.kind, "digest": op.digest}
         state.update({"repository": str(ROOT), "updated_at": timestamp()})
         write_json(state_file, state)
-        ignore = destination / ".lzh-memory/.gitignore"
+        ignore = destination / ".zhizhou/.gitignore"
         if not ignore.exists():
             atomic_text(ignore, "*\n")
         print("Installed. Start a new tool session to load updated instructions and skills.")
@@ -435,7 +450,20 @@ def check(args):
             changed.append(source.name)
     notes = list((ROOT / "memory/notes").glob("*.md"))
     states = Counter(read_note(path)[0]["status"] for path in notes)
+    snapshot_counts = []
+    for manifest in ("project-guides.json", "project-skills.json", "research-records.json", "client-assets.json"):
+        records = read_json(ROOT / "sources" / manifest, [])
+        for record in records:
+            snapshot = ROOT / record["snapshot"]
+            if not snapshot.exists():
+                raise MemoryError(f"Missing registered snapshot: {record['snapshot']}")
+            if snapshot.is_dir() and not (snapshot / "SKILL.md").is_file():
+                raise MemoryError(f"Snapshot skill has no SKILL.md: {record['snapshot']}")
+        if records:
+            snapshot_counts.append((manifest, len(records)))
     print(f"OK: {len(source_skills)} skills, {total_files} files, {total_bytes / 1024**2:.1f} MiB; {len(notes)} notes {dict(states)}")
+    for manifest, count in snapshot_counts:
+        print(f"  {manifest}: {count} snapshots present")
     if changed:
         print("Canonical edits since import (retained): " + ", ".join(changed))
     print("Checked local content structure; client loading and external skill dependencies are separate.")

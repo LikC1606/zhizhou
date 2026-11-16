@@ -1,7 +1,7 @@
 ---
 title: "lzh-memory 的远程保存位置"
 scope: "project:lzh-memory"
-status: "confirmed"
+status: "superseded"
 source: "用户于 2026-11-16 在本项目建立对话的 Q4 中明确选择创建并首次推送"
 recorded_at: "2026-11-16T06:09:01+00:00"
 ---

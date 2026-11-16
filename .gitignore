@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .lzh-memory/
+.zhizhou/
 .local/
 .test-tmp/
 .DS_Store

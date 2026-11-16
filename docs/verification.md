@@ -11,7 +11,7 @@
 日常验证命令：
 
 ```bash
-./lzh-memory check
+./zhizhou check
 python3 -m unittest discover -s tests -v
 ```
 
@@ -22,3 +22,15 @@ TMPDIR=/data/lzh/default-storage/tmp /usr/bin/python3 -m unittest discover -s te
 ```
 
 本次没有修改真实客户端配置、调用模型或运行外部 skill 服务。四个客户端实际加载和未来任务是否遵守约定，需要客户端运行证据；文件验证不能代替这些结果。
+
+## 查漏与重命名
+
+同日继续整理，项目更名为知舟（Zhizhou）：
+
+- 通用 skill 增至 59 项，2,496 文件、约 43.6 MiB。
+- 补入 16 份项目指南、24 份项目 skill 快照、8 份科研协议／决定记录，项目资料共 48 条来源记录。
+- 补入 2 份客户端专用规则／agent 定义，以及 Cloudflare 的 14 份完整 skill 和插件 manifest，客户端资产清单共 17 条。
+- 对补入资料逐项核对源与快照内容摘要；保持项目、分支、客户端范围与协议替代关系。
+- 增加旧命令／状态迁移、旧规则修改保护、旧 Cursor 文件复用和已登记项目快照缺失检测；更新后的 17 项测试通过。
+
+新旧入口、完整迁移及来源记录检查的最终结果，以当前 `./zhizhou check` 和对应测试执行为准。当前客户端配置和求解进程未在本轮修改。
