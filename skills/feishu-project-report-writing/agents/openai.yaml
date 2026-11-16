@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目文档与周报写作"
+  short_description: "按最新代码写中文项目文档和周报，先成果后计划，保留目录导航"
+  default_prompt: "使用 $feishu-project-report-writing，结合最新仓库代码更新项目文档和周报，写清已完成与下一步优化方向。"

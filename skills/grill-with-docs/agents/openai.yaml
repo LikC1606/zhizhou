@@ -1,0 +1,5 @@
+interface:
+  display_name: "Grill with Docs"
+  short_description: "分轮追问研究方案，将已确认的关键决策和科学定义写回项目文档"
+policy:
+  allow_implicit_invocation: true

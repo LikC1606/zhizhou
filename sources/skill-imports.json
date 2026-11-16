@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "skills": {
+    "autoresearch-baseline-quality": {
+      "source": "/home/lzh/.codex/skills/autoresearch-baseline-quality",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-baseline-quality",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "2ab12ac2af535abe1f952e4b6c2994cd080dab078f2afa3165912eef2914238a",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-conversation-handoff": {
+      "source": "/home/lzh/.codex/skills/autoresearch-conversation-handoff",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-conversation-handoff",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "66e2554621df4bac8f859d8e57f332b6c81afcf19f27400729737aa47243fc71",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-feishu-three-table": {
+      "source": "/home/lzh/.codex/skills/autoresearch-feishu-three-table",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-feishu-three-table",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "5c4d2ea1a228a556e1476b89568ce52d7e28488f34d4a6e99bab999227db9de2",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-optimization-surface": {
+      "source": "/home/lzh/.codex/skills/autoresearch-optimization-surface",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-optimization-surface",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "fdff5e900288277f4f6875ee5a44a6c4f88706d990213967aa8796929729c6ca",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-paper-discovery": {
+      "source": "/home/lzh/.codex/skills/autoresearch-paper-discovery",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-paper-discovery",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "af2f8147c970aac0144f756a4800eb4c87ec2c109c0d73a482cf8c8ecfaf9e21",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-run-isolation": {
+      "source": "/home/lzh/.codex/skills/autoresearch-run-isolation",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-run-isolation",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "d4af7003414faf01560886cda89817befeb4949d8dd9244c716e3cddcac1adde",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-task-authoring": {
+      "source": "/home/lzh/.codex/skills/autoresearch-task-authoring",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-task-authoring",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "715fef9765eefeb361e65762f948910960538dec92bc956e501446693342260e",
+      "origin": "unknown; retained local installation"
+    },
+    "autoresearch-task-qa": {
+      "source": "/home/lzh/.codex/skills/autoresearch-task-qa",
+      "resolved_source": "/home/lzh/.codex/skills/autoresearch-task-qa",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "7d56470e54ee9c71571581369ff9cbe1fe855f7a1666adb04e011287391d8803",
+      "origin": "unknown; retained local installation"
+    },
+    "codebase-design": {
+      "source": "/home/lzh/.codex/skills/codebase-design",
+      "resolved_source": "/home/lzh/.codex/skills/codebase-design",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "495c5adbe30519c2dfd958ae305c648f8c2fc3b059a6bdeb3e27af4b9a156271",
+      "origin": "unknown; retained local installation"
+    },
+    "deep-research": {
+      "source": "/home/lzh/.codex/skills/deep-research",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.codex/skills/deep-research",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "9279196ba0e400801f37c5f37f1b5e4e7b14a5c20877eb96f68f9adb2af8ce0c",
+      "origin": "unknown; retained local installation"
+    },
+    "domain-modeling": {
+      "source": "/home/lzh/.codex/skills/domain-modeling",
+      "resolved_source": "/home/lzh/.codex/skills/domain-modeling",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "286ec5508b3d1d55ee5df06ac5726e2491fc5292b05f24e97bebe5051e5f73b1",
+      "origin": "unknown; retained local installation"
+    },
+    "feishu-project-report-writing": {
+      "source": "/home/lzh/.codex/skills/feishu-project-report-writing",
+      "resolved_source": "/home/lzh/.codex/skills/feishu-project-report-writing",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "c6fc9b94a158c64976882dbfe081282573e0e4b42d0fca76e990c047ffbd8672",
+      "origin": "unknown; retained local installation"
+    },
+    "find-skills": {
+      "source": "/home/lzh/.codex/skills/find-skills",
+      "resolved_source": "/home/lzh/.codex/skills/find-skills",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "6705e6a2b77d013a8d71b429206621c5378745981a3d98da5175476f3e2d0b1b",
+      "origin": "unknown; retained local installation"
+    },
+    "grill-me": {
+      "source": "/home/lzh/.codex/skills/grill-me",
+      "resolved_source": "/home/lzh/.codex/skills/grill-me",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "f9bdf38ed8c61d524c6a122286c145287aa7c70268fb62efac48a5734fd743d0",
+      "origin": "unknown; retained local installation"
+    },
+    "grill-with-docs": {
+      "source": "/home/lzh/.codex/skills/grill-with-docs",
+      "resolved_source": "/home/lzh/.codex/skills/grill-with-docs",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "840bb235db50cdf868a796ab722799fec493e71c4ceff877d008d0121dfc61f4",
+      "origin": "unknown; retained local installation"
+    },
+    "grilling": {
+      "source": "/home/lzh/.codex/skills/grilling",
+      "resolved_source": "/home/lzh/.codex/skills/grilling",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "1738341d1bf83c81ad007ce020af19d58282bda838686bfc343fbddb3cf0499e",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-core": {
+      "source": "/home/lzh/.codex/skills/gsap-core",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-core",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "b016d1bf12fa93f106fe16b2703fac04c3d4b780040da0d8d1ed041faa33bcd7",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-frameworks": {
+      "source": "/home/lzh/.codex/skills/gsap-frameworks",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-frameworks",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "0581cafdc91fbf62f24a5cb8c46248e213627fe0db5315eb1ef8ac21fa4f7cf2",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-performance": {
+      "source": "/home/lzh/.codex/skills/gsap-performance",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-performance",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "bc0ee6ab8103c3aff55fbaa2ab25c7bd9f595b73c505ad9b47fde61832ac2749",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-plugins": {
+      "source": "/home/lzh/.codex/skills/gsap-plugins",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-plugins",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "5ee8540b224efd01bbb65bfccfd935f7dbb22c956d23cd26274a5275e21e35a5",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-react": {
+      "source": "/home/lzh/.codex/skills/gsap-react",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-react",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "4cc5503b2850a49fb192a005f3b0b02a4fade55f720226b74a79d1ae7516e600",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-scrolltrigger": {
+      "source": "/home/lzh/.codex/skills/gsap-scrolltrigger",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-scrolltrigger",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "38440ffa8c8caa41e267f00f9a46a1ba473d9c1ab794b74f322c800caa8f41bd",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-timeline": {
+      "source": "/home/lzh/.codex/skills/gsap-timeline",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-timeline",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "e5297b50a1dfd9833f77943b06cc6fae8ee6f9e1d7b8cc7961c40cbdd36cbd58",
+      "origin": "unknown; retained local installation"
+    },
+    "gsap-utils": {
+      "source": "/home/lzh/.codex/skills/gsap-utils",
+      "resolved_source": "/home/lzh/.codex/skills/gsap-utils",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "1b6b19945f0c8f54dd53efa5132134f462e83399a588247dcd69f1c47761e263",
+      "origin": "unknown; retained local installation"
+    },
+    "humanizer": {
+      "source": "/home/lzh/.codex/skills/humanizer",
+      "resolved_source": "/home/lzh/.codex/skills/humanizer",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "e568396a4ffdc0628d57141f5fca5da7f86f0ecc72b76c1ca676ef1cf3109bff",
+      "origin": "unknown; retained local installation"
+    },
+    "improve-codebase-architecture": {
+      "source": "/home/lzh/.codex/skills/improve-codebase-architecture",
+      "resolved_source": "/home/lzh/.codex/skills/improve-codebase-architecture",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "92b24382546b6ff6653b3a66f9ea2aa7a15562d0c1f4fd8bc0a3814ac0ee1350",
+      "origin": "unknown; retained local installation"
+    },
+    "react-bits": {
+      "source": "/home/lzh/.codex/skills/react-bits",
+      "resolved_source": "/home/lzh/.codex/skills/react-bits",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "a4ceafbd96df252a0c6fe0c23f10fbfc062bc219ee8570c3ecf6fdc911ba2ae8",
+      "origin": "unknown; retained local installation"
+    },
+    "record-decision": {
+      "source": "/home/lzh/.codex/skills/record-decision",
+      "resolved_source": "/home/lzh/.codex/skills/record-decision",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "9776b302c19b08626349bcb521406e82ad7715780c0c186d76760128d759fa57",
+      "origin": "unknown; retained local installation"
+    },
+    "stop-that-shit": {
+      "source": "/home/lzh/.codex/skills/stop-that-shit",
+      "resolved_source": "/home/lzh/.codex/skills/stop-that-shit",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "fd1d42c91ac010601d93f8bd725bf5b08a60297b4035a7c46e9182c0f7b09e96",
+      "origin": "unknown; retained local installation"
+    },
+    "taste-skill": {
+      "source": "/home/lzh/.codex/skills/taste-skill",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.codex/skills/taste-skill",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "4bf93f1d8c77be353e06844c9583aeca5fea4643b539a33734121ea357876246",
+      "origin": "unknown; retained local installation"
+    },
+    "lark-approval": {
+      "source": "/home/lzh/.agents/skills/lark-approval",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-approval",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "f749ae971772ffc04863b1319515714b623b1e41fccc0adc9cdfcc48ae54e5cf",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-apps": {
+      "source": "/home/lzh/.agents/skills/lark-apps",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-apps",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "026bd84986b09f1895328173ae19edc6cf9e3645a52320d8e9a2bd9d70cc4894",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-attendance": {
+      "source": "/home/lzh/.agents/skills/lark-attendance",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-attendance",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "ebc74c2a2d7cb879490f95a650eac3483fa24b3227b35de510c9a56ae3b92888",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-base": {
+      "source": "/home/lzh/.agents/skills/lark-base",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-base",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "de8facc4afa3465e81395b6854f85e3bb58d78c346bf421a8fcf140eda67967e",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-calendar": {
+      "source": "/home/lzh/.agents/skills/lark-calendar",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-calendar",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "27c08bc135a20abdcce1da2c94b376babfc0e0180a72fd474333f91ffb0146fd",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-contact": {
+      "source": "/home/lzh/.agents/skills/lark-contact",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-contact",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "584fad4af2ad3f7518ad56d9cd57b29ef7b0b10cde83603c4c8f21621756cd7f",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-doc": {
+      "source": "/home/lzh/.agents/skills/lark-doc",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-doc",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "22373daca057f5af7c7290ba03d8deaf275016b650d86e8f450d16ee4646850a",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-drive": {
+      "source": "/home/lzh/.agents/skills/lark-drive",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-drive",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "5b7d22323ed7b012483a4a91c6389b78d306c3e5ae54c0fa13a2fc227df3f953",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-event": {
+      "source": "/home/lzh/.agents/skills/lark-event",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-event",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "3a0e8f58ce3a1b9fcdfb0a8f5b6eb71f4061c2e7f838a1e03599ac9d076e38c8",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-im": {
+      "source": "/home/lzh/.agents/skills/lark-im",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-im",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "05ecd9f640cfa1e38ecb6e2c139c5114cdf7d627edbf18c8fd8ef0af72e36f43",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-mail": {
+      "source": "/home/lzh/.agents/skills/lark-mail",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-mail",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "572734f20fc4ee425024cbc9e630ff6ef240bdffc3f39c0add1a4bb82dea0e51",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-markdown": {
+      "source": "/home/lzh/.agents/skills/lark-markdown",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-markdown",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "cf10e4f898e96a171e986340c98ae3caf4d51c9854b2402791e5bbc36f59fc2a",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-meeting": {
+      "source": "/home/lzh/.agents/skills/lark-meeting",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-meeting",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "65943b318e307eaddf3bfbd4b6f6638f6fcc6d36c5eb2311d6e644541832e7c2",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-minutes": {
+      "source": "/home/lzh/.agents/skills/lark-minutes",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-minutes",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "11ecf6c9fbe6da96350e7c37d15ed8f642c723159a45e4adff1b93a097a47a59",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-note": {
+      "source": "/home/lzh/.agents/skills/lark-note",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-note",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "6ee29343ea83be284eba05c98e2c11d822e36d417c79c3e18ca788aaf3b7391c",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-okr": {
+      "source": "/home/lzh/.agents/skills/lark-okr",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-okr",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "d3b1f7050ae005027e3ea09ffad2e69631e6e9a82952789108f642945540aa0d",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-openapi-explorer": {
+      "source": "/home/lzh/.agents/skills/lark-openapi-explorer",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-openapi-explorer",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "f93c47b2da25b577ca56d8ec07b0f7788eb6739058256dbfeacfc69c2fd1a0af",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-shared": {
+      "source": "/home/lzh/.agents/skills/lark-shared",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-shared",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "28828a5d1e5045401abe4e60eee94fdf641266894f4cd3cb74fd2ea6be17f065",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-sheets": {
+      "source": "/home/lzh/.agents/skills/lark-sheets",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-sheets",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "eecc4f07a009fa18e63d6f49e5b5a124bca9ad0c377737a2f53dc4fcf81e8002",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-skill-maker": {
+      "source": "/home/lzh/.agents/skills/lark-skill-maker",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-skill-maker",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "d32c94bc63d0285c779ad4d00de5caf330300ab29b323fefd82d637ed50e74bd",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-slides": {
+      "source": "/home/lzh/.agents/skills/lark-slides",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-slides",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "5a2aded5dc4952f7eeb72b5dfed7fb50419e5a8e45b7f6a6e02c02b985f59133",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-task": {
+      "source": "/home/lzh/.agents/skills/lark-task",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-task",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "c7e15a90fc491036a1809d38d673b284c14954d257178aafe9ca949ec5604b0e",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-vc": {
+      "source": "/home/lzh/.agents/skills/lark-vc",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-vc",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "bff46f10fed87712b2c95818da612b911c958392b4aaec99791c73053abdff16",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-vc-agent": {
+      "source": "/home/lzh/.agents/skills/lark-vc-agent",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-vc-agent",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "9dd462fc5677869ba374ae2bfb56ebd487f824b31d3d455c042ceaff5a0552bb",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-whiteboard": {
+      "source": "/home/lzh/.agents/skills/lark-whiteboard",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-whiteboard",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "7357ff59d2ab584fa868e611b839440f256378f94c6e9c666aa78e7d78d7fce6",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-wiki": {
+      "source": "/home/lzh/.agents/skills/lark-wiki",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-wiki",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "2160f3aa7d2166f1c2c62a5ac8208f86c9186730271e60374eda01792cfc5824",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-workflow-meeting-summary": {
+      "source": "/home/lzh/.agents/skills/lark-workflow-meeting-summary",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-workflow-meeting-summary",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "e00f2d255f25a2cada4da43df95854794f3754103b807cf349f9176fea232890",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    },
+    "lark-workflow-standup-report": {
+      "source": "/home/lzh/.agents/skills/lark-workflow-standup-report",
+      "resolved_source": "/data/lzh/local-storage/home/lzh/.agents/skills/lark-workflow-standup-report",
+      "captured_at": "2026-11-16T06:01:11+00:00",
+      "digest": "bf70b45c0cec1415c5542854b5703ce3dab237b2377a008a9d091cb6e9b9c97b",
+      "origin": "Feishu official installation; see sources/lark-skills.lock.json for upstream and localMerge"
+    }
+  }
+}

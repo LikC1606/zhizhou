@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.lzh-memory/
+.local/
+.test-tmp/
+.DS_Store

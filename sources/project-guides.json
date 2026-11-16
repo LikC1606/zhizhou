@@ -1,0 +1,51 @@
+[
+  {
+    "project": "theorem-os",
+    "source": "/home/lzh/theorem-os/AGENTS.md",
+    "snapshot": "projects/theorem-os/AGENTS.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "deepscientist",
+    "source": "/data/lzh/workspace/projects/deepscientist/main/AGENTS.md",
+    "snapshot": "projects/deepscientist/AGENTS.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "deepscientist",
+    "source": "/data/lzh/workspace/projects/deepscientist/main/CLAUDE.md",
+    "snapshot": "projects/deepscientist/CLAUDE.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "deepscientist-math",
+    "source": "/data/lzh/workspace/projects/deepscientist/math/AGENTS.md",
+    "snapshot": "projects/deepscientist-math/AGENTS.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "deepscientist-math",
+    "source": "/data/lzh/workspace/projects/deepscientist/math/CLAUDE.md",
+    "snapshot": "projects/deepscientist-math/CLAUDE.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "harbor-builder",
+    "source": "/data/lzh/workspace/projects/harbor/builder/AGENTS.md",
+    "snapshot": "projects/harbor-builder/AGENTS.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  },
+  {
+    "project": "harbor-builder",
+    "source": "/data/lzh/workspace/projects/harbor/builder/CLAUDE.md",
+    "snapshot": "projects/harbor-builder/CLAUDE.md",
+    "captured_on": "2026-11-16",
+    "role": "historical-project-guide"
+  }
+]
