@@ -13,7 +13,7 @@
 [![Python](https://img.shields.io/badge/runtime-Python%203-3776AB)](./zhizhou)
 [![MIT for original code](https://img.shields.io/badge/original%20code-MIT-2ea44f)](./LICENSE)
 
-![知舟流程图：Git 仓库保存协作约定、科研笔记、项目指南和 Skills。先预览，再显式应用，生成 Codex、Claude Code、Gemini CLI 的入口，另为 Cursor 导出规则。](./docs/assets/zhizhou-readme-cover-academic.webp)
+![两位研究者在新旧电脑旁，翻开带 Git 标签的共享档案夹，对照其中的资料核对安装预览。](./docs/assets/zhizhou-readme-cover-editorial.webp)
 
 ## 先检查，再安装
 

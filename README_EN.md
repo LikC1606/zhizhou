@@ -13,7 +13,7 @@ Keep your AI working agreements, research notes, project guides, and complete sk
 [![Python](https://img.shields.io/badge/runtime-Python%203-3776AB)](./zhizhou)
 [![MIT for original code](https://img.shields.io/badge/original%20code-MIT-2ea44f)](./LICENSE)
 
-![Zhizhou workflow: one Git repository holds agreements, research notes, project guides, and Skills. Preview, then apply to create entries for Codex, Claude Code, and Gemini CLI, and export Cursor rules.](./docs/assets/zhizhou-readme-cover-academic.webp)
+![Two researchers check an installer preview against a shared research folio marked Git, with their old and new computers on the table.](./docs/assets/zhizhou-readme-cover-editorial.webp)
 
 ## Inspect before installing
 
