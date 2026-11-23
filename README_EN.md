@@ -1,17 +1,16 @@
-<!-- README_SYNC: source=bb1571b65bc930204b1d4648f5a1c3eed1646bd6; updated=2026-11-18 -->
-
-[简体中文](./README.md) · English
+<!-- README_SYNC: source=bb1571b65bc930204b1d4648f5a1c3eed1646bd6; updated=2026-11-23 -->
+<p align="center"><a href="./README.md" lang="zh-CN">简体中文</a> · English</p>
 
 # Zhizhou · 知舟
 
-Keep your AI working agreements, research notes, project guides, and complete skills in Git. When you move to another machine or client, preview the paths the installer will change, then set up Codex, Claude Code, Cursor, or Gemini CLI from the same repository.
-
-[Star Zhizhou](https://github.com/LikC1606/zhizhou/stargazers) to revisit the layout or migration workflow.
+Keep your AI working agreements, research notes, project guides, and full skill bundles versioned in Git. When switching machines or coding assistants, preview every path the installer will touch, then configure Codex, Claude Code, Cursor, and Gemini CLI from one repository.
 
 [![Stars](https://img.shields.io/github/stars/LikC1606/zhizhou)](https://github.com/LikC1606/zhizhou/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/LikC1606/zhizhou)](https://github.com/LikC1606/zhizhou/commits/main/)
 [![Python](https://img.shields.io/badge/runtime-Python%203-3776AB)](./zhizhou)
 [![MIT for original code](https://img.shields.io/badge/original%20code-MIT-2ea44f)](./LICENSE)
+
+[Star Zhizhou](https://github.com/LikC1606/zhizhou/stargazers) to revisit the portable memory layout and migration workflow.
 
 ![Two researchers check an installer preview against a shared research folio marked Git, with their old and new computers on the table.](./docs/assets/zhizhou-readme-cover-editorial.webp)
 

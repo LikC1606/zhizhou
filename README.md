@@ -1,17 +1,16 @@
-<!-- README_SYNC: source=bb1571b65bc930204b1d4648f5a1c3eed1646bd6; updated=2026-11-18 -->
-
-简体中文 · [English](./README_EN.md)
+<!-- README_SYNC: source=bb1571b65bc930204b1d4648f5a1c3eed1646bd6; updated=2026-11-23 -->
+<p align="center">简体中文 · <a href="./README_EN.md" lang="en">English</a></p>
 
 # 知舟 · Zhizhou
 
-把 AI 协作的工作约定、科研经验、项目指南和整套技能留在 Git 里。换机器或客户端时，先看安装器会改哪些路径，再为 Codex、Claude Code、Cursor 和 Gemini CLI 生成入口。
-
-如果这套组织方式适合你，可以 [Star 收藏](https://github.com/LikC1606/zhizhou/stargazers)。
+把 AI 协作的工作约定、科研经验、项目指南和整套技能沉淀在 Git 仓库里。换机器或切换客户端时，先预览安装器会改动的路径，再一键为 Codex、Claude Code、Cursor 和 Gemini CLI 生成统一入口。
 
 [![Stars](https://img.shields.io/github/stars/LikC1606/zhizhou)](https://github.com/LikC1606/zhizhou/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/LikC1606/zhizhou)](https://github.com/LikC1606/zhizhou/commits/main/)
 [![Python](https://img.shields.io/badge/runtime-Python%203-3776AB)](./zhizhou)
 [![MIT for original code](https://img.shields.io/badge/original%20code-MIT-2ea44f)](./LICENSE)
+
+如果这套跨客户端工作记忆组织方式适合你，欢迎 [Star 收藏](https://github.com/LikC1606/zhizhou/stargazers)。
 
 ![两位研究者在新旧电脑旁，翻开带 Git 标签的共享档案夹，对照其中的资料核对安装预览。](./docs/assets/zhizhou-readme-cover-editorial.webp)
 
