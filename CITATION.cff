@@ -8,7 +8,8 @@ title: "Zhizhou: Portable Working Memory for AI Coding and Research"
 authors:
   - family-names: Liu
     given-names: Zhenhao
-    website: https://github.com/LikC1606
+    affiliation: "WestlakeNLP, Westlake University"
+    website: https://likc1606.github.io/
 repository-code: https://github.com/LikC1606/zhizhou
 url: https://github.com/LikC1606/zhizhou
 abstract: >-
