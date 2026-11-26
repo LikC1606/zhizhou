@@ -23,6 +23,7 @@ The root MIT License does not relicense the following imported material:
 - Skills and their scripts, references and assets under `skills/`.
 - Project guides, project skills and research snapshots under `projects/`, excluding the original index listed above.
 - Client rules, agent definitions and plugin snapshots under `clients/`, excluding the original index listed above.
+- Third-party papers under `sources/papers/`.
 - `memory/working-agreements.md`, `memory/projects/`, `sources/originals/` and `sources/lark-skills.lock.json`.
 - Third-party license texts under `LICENSES/` and third-party content quoted in provenance records.
 

@@ -7,6 +7,7 @@
 | [working-agreements.md](working-agreements.md) | 通用工作约定；首次来自 `~/.codex/AGENTS.md`，于 2026-11-16 收录 |
 | [maintenance.md](maintenance.md) | 本知识库如何记录和使用经验；来源为用户在本项目对话中的确认 |
 | [research.md](research.md) | 通用科研协作要求及相关 skills；由已存在的个人约定整理 |
+| [MaAS 写作参考](notes/2026-11-26-maas-写作参考.md) | 多智能体架构搜索与动态推理的写作参考，附正式版 PDF、原文定位与 BibTeX |
 | [projects/theorem-os.md](projects/theorem-os.md) | TheoremOS 系统维护与逐题干预边界；来源为用户 2026-11-15 的明确要求 |
 | `notes/` | 后续记录；逐条保留 source、scope 和 confirmed/pending 状态 |
 | [../projects/README.md](../projects/README.md) | 既有项目指南的历史快照及来源 |

@@ -9,6 +9,7 @@
 | [Humanizer](skills/humanizer/) | Copyright (c) 2025 Siqi Chen；插件指向 [blader/humanizer](https://github.com/blader/humanizer) | 完整 [MIT License](skills/humanizer/LICENSE)；本地修改保留在快照中 |
 | [taste-skill](skills/taste-skill/) 的代码和文档 | Copyright (c) 2026 Leonxlnx | 完整 [MIT License](skills/taste-skill/LICENSE)；素材另见下节 |
 | [Cloudflare 技能快照](clients/claude/plugins/cloudflare/) | Cloudflare；元数据指向 [cloudflare/skills](https://github.com/cloudflare/skills) | [plugin.json](clients/claude/plugins/cloudflare/plugin.json) 声明 Apache-2.0；另存完整 [Apache-2.0 文本](LICENSES/Apache-2.0.txt) |
+| [Multi-agent Architecture Search via Agentic Supernet](sources/papers/zhang2025-maas.pdf) | © 2025 Guibin Zhang、Luyang Niu、Junfeng Fang、Kun Wang、Lei Bai、Xiang Wang。[原始发表页](https://proceedings.mlr.press/v267/zhang25bi.html)，ICML 2025，PMLR 267，75834–75852 | 未修改的正式版 PDF。[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，依据 [PMLR 出版协议](https://proceedings.mlr.press/pmlr-license-agreement.html)及 [ICML 2025 作者指南](https://icml.cc/Conferences/2025/AuthorInstructions)，2026-11-26 核对 |
 
 Cloudflare 的许可文本取自上游 [LICENSE](https://github.com/cloudflare/skills/blob/main/LICENSE)，SHA256 为 `58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd`。核对时上游 `main/NOTICE` 返回 404，未取得独立 NOTICE 文件。许可文本对应读取时的上游 main，不证明本地技能快照与某个上游提交完全一致；本地修改状态仍为 unknown，详见 [插件来源记录](sources/client-plugins.json)。
 
